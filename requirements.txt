@@ -1,3 +1,9 @@
-alpaca-py
-mcp
-python-dotenv
+# Core MCP dependencies
+mcp>=1.0.0
+python-dotenv>=1.0.0
+
+# Alpaca Trading API
+alpaca-py>=0.13.0
+
+# Alternative: FastMCP (for server_fastmcp.py)
+fastmcp>=0.1.0

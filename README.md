@@ -1,4 +1,4 @@
-# Alpaca MCP Server
+# Alpaca Trading MCP Server
 
 This is a Model Context Protocol (MCP) server implementation for Alpaca's Trading API. It enables large language models (LLMs) on Claude Desktop, Cursor, or VScode to interact with Alpaca's trading infrastructure using natural language (English). This server supports stock trading, options trading, portfolio management, watchlist handling, and real-time market data access.
 
@@ -49,6 +49,17 @@ This is a Model Context Protocol (MCP) server implementation for Alpaca's Tradin
 
 ### 1. Installation
 
+#### Two Server Implementations
+
+This repository provides two different MCP server implementations:
+
+1. **`server.py`** - Uses the official MCP Python SDK (recommended)
+2. **`server_fastmcp.py`** - Uses the FastMCP framework (alternative)
+
+Both servers provide identical functionality, choose based on your preference.
+
+### 2. Setup
+
 1. Clone the repository and navigate to the directory:
    ```bash
    git clone https://github.com/alpacahq/alpaca-mcp-server.git
@@ -80,9 +91,10 @@ This is a Model Context Protocol (MCP) server implementation for Alpaca's Tradin
 
 After cloning and activating the virtual environment, your directory structure should look like this:
 ```
-alpaca-mcp-server/          ← This is the workspace folder (= project root)
-├── alpaca_mcp_server.py    ← Script is directly in workspace root
-├── .github/                ← VS Code settings (for VS Code users)
+alpaca-trading-mcp/         ← This is the workspace folder (= project root)
+├── server.py               ← MCP SDK implementation (recommended)
+├── server_fastmcp.py       ← FastMCP implementation (alternative)
+├── .github/                ← GitHub configuration
 │ ├── core/                 ← Core utility modules
 │ └── workflows/            ← GitHub Actions workflows
 ├── .vscode/                ← VS Code settings (for VS Code users)

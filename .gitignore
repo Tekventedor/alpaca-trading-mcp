@@ -1,8 +1,7 @@
-# Environment variables - NEVER commit these!
-.env
+# Environment variables
+# .env is included with placeholder values
 .env.local
 .env.*.local
-*.env
 
 # Python
 __pycache__/

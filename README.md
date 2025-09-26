@@ -101,7 +101,7 @@ alpaca-trading-mcp/         ← This is the workspace folder (= project root)
 │   └── mcp.json
 ├── venv/                   ← Virtual environment folder
 │   └── bin/python
-├── .env.example            ← Environment template (use this to create `.env` file)
+├── .env                    ← Environment file with placeholder values (edit this)
 ├── .gitignore              
 ├── Dockerfile              ← Docker configuration (for Docker use)
 ├── .dockerignore           ← Docker ignore (for Docker use)
@@ -109,14 +109,11 @@ alpaca-trading-mcp/         ← This is the workspace folder (= project root)
 └── README.md
 ```
 
-### 2. Create and edit a .env file for your credentials in the project directory
+### 2. Edit the .env file for your credentials in the project directory
 
-1. Copy the example environment file in the project root by running this command:
-   ```bash
-   cp .env.example .env
-   ```
+1. The repository includes a `.env` file with placeholder values
 
-2. Replace the credentials (e.g. API keys) in the `.env` file:
+2. Replace the placeholder credentials with your actual API keys in the `.env` file:
 
    ```
    ALPACA_API_KEY = "your_alpaca_api_key_for_paper_account"

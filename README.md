@@ -130,16 +130,22 @@ alpaca-trading-mcp/         ← This is the workspace folder (= project root)
 
 ### 3. Start the MCP Server
 
-Open a terminal in the project root directory and run the following command:
+Open a terminal in the project root directory and run one of the following:
 
+#### Option 1: Using MCP SDK Server (Recommended)
+```bash
+python server.py
+```
+
+#### Option 2: Using FastMCP Server
 **For local usage (default - stdio transport):**
 ```bash
-python alpaca_mcp_server.py
+python server_fastmcp.py
 ```
 
 **For remote usage (HTTP transport):**
 ```bash
-python alpaca_mcp_server.py --transport http
+python server_fastmcp.py --transport http
 ```
 
 **Available transport options:**
@@ -181,7 +187,7 @@ To enable **live trading with real funds**, update the following configuration f
        "alpaca": {
          "command": "<project_root>/venv/bin/python",
          "args": [
-           "/path/to/alpaca_mcp_server.py"
+           "/path/to/server.py"
          ],
          "env": {
            "ALPACA_API_KEY": "your_alpaca_api_key_for_live_account",
@@ -209,14 +215,14 @@ To use Alpaca MCP Server with Claude Desktop, please follow the steps below. The
   **Note:**\
     Replace <project_root> with the path to your cloned alpaca-mcp-server directory. This should point to the Python executable inside the virtual environment you created with `python3 -m venv venv` in the terminal.
 
-**For local usage (stdio transport - recommended):**
+**Option 1: Using MCP SDK Server (Recommended):**
 ```json
 {
   "mcpServers": {
     "alpaca": {
       "command": "<project_root>/venv/bin/python",
       "args": [
-        "/path/to/alpaca-mcp-server/alpaca_mcp_server.py"
+        "/path/to/alpaca-trading-mcp/server.py"
       ],
       "env": {
         "ALPACA_API_KEY": "your_alpaca_api_key_for_paper_account",
@@ -227,7 +233,25 @@ To use Alpaca MCP Server with Claude Desktop, please follow the steps below. The
 }
 ```
 
-**For remote usage (HTTP transport):**
+**Option 2: Using FastMCP Server:**
+```json
+{
+  "mcpServers": {
+    "alpaca": {
+      "command": "<project_root>/venv/bin/python",
+      "args": [
+        "/path/to/alpaca-trading-mcp/server_fastmcp.py"
+      ],
+      "env": {
+        "ALPACA_API_KEY": "your_alpaca_api_key_for_paper_account",
+        "ALPACA_SECRET_KEY": "your_alpaca_secret_key_for_paper_account"
+      }
+    }
+  }
+}
+```
+
+**For remote usage (HTTP transport - FastMCP only):**
 ```json
 {
   "mcpServers": {

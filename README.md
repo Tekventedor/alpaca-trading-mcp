@@ -39,6 +39,10 @@ This is a Model Context Protocol (MCP) server implementation for Alpaca's Tradin
   - Query details for stocks, crypto, and other Alpaca-supported assets
   - Filter assets by status, class, exchange, and attributes
 
+## Demo
+
+![Alpaca Trading MCP Demo](alpaca.gif)
+
 ## Getting Started
 ### 0. Prerequisites
 

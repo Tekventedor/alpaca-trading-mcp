@@ -743,6 +743,10 @@ This server can place real trades and access your portfolio. Treat your API keys
 
 The user agent for API calls defaults to 'ALPACA-MCP-SERVER' to help Alpaca identify MCP server usage and improve user experience. You can opt out by modifying the 'USER_AGENT' constant in '.github/core/user_agent_mixin.py' or by removing the 'UserAgentMixin' from the client class definitions in 'alpaca_mcp_server.py' — though we kindly hope you'll keep it enabled to support ongoing improvements.
 
+## Custom MCP Server Development
+
+We develop MCP Servers for customers, if you need MCP server for your own system similar to Alpaca Trading MCP server, please contact us (https://www.flowhunt.io/contact/). Here is the description how we develop MCP Servers for our customers: https://www.flowhunt.io/services/mcp-server-development/
+
 ## License
 
 MIT
